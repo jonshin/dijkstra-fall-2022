@@ -12,5 +12,11 @@ function kebabToCamel (kebabString) {
     // - otherwise, copy lowercased to camelString
 
     //test-string => testString
+    for (i = 0; i < kebabString.lenght; i++) {
+        if () {
+
+        }
+    }
+
     return camelString;
 }
