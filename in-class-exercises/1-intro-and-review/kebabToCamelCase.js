@@ -12,9 +12,12 @@ function kebabToCamel (kebabString) {
     // - otherwise, copy lowercased to camelString
 
     //test-string => testString
-    for (i = 0; i < kebabString.lenght; i++) {
-        if () {
-
+    for (i = 0; i < kebabString.length; i++) {
+        if (kebabString[i] = "-") {
+            let newUpperCase = kebabString[i+1].toUpperCase();
+            camelString.push(newUpperCase)
+        } else{
+            camelString.push(kebabString[i]);
         }
     }
 
