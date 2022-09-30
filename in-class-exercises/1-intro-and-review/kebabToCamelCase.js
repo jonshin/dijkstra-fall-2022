@@ -18,11 +18,12 @@ function kebabToCamel (kebabString) {
             camelString += newUpperCase;
             i++;
         } else{
-            camelString += kebabString[i];
+            var newLowerCase = kebabString[i].toLowerCase();
+            camelString += newLowerCase;
         }
     }
 
     return camelString;
 }
 
-console.log(kebabToCamel("kebab-write"))
+console.log(kebabToCamel("ALL-CAPS"))
