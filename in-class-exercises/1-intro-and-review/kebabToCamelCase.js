@@ -2,24 +2,27 @@
 
 // * change-this-word gets converted into changeThisWord
 // *day-month-year gets converted into dayMonthYear
-// ALL-CAPS gets converted ubti allCaps
+// ALL-CAPS gets converted into allCaps
 
 function kebabToCamel (kebabString) {
-    let camelString
+    let camelString = "";
     
     //loop over kebabstring 
     //- if the char dash, don't use it AND the following char would be capital
     // - otherwise, copy lowercased to camelString
 
     //test-string => testString
-    for (i = 0; i < kebabString.length; i++) {
-        if (kebabString[i] = "-") {
-            let newUpperCase = kebabString[i+1].toUpperCase();
-            camelString.push(newUpperCase)
+    for (var i = 0; i < kebabString.length; i++) {
+        if (kebabString[i] == "-") {
+            var newUpperCase = kebabString[i + 1].toUpperCase();
+            camelString += newUpperCase;
+            i++;
         } else{
-            camelString.push(kebabString[i]);
+            camelString += kebabString[i];
         }
     }
 
     return camelString;
 }
+
+console.log(kebabToCamel("kebab-write"))
